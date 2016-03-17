@@ -1,0 +1,48 @@
+{
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"name": "Launch",
+			"type": "node",
+			"request": "launch",
+			"program": "${workspaceRoot}/server.js",
+			"stopOnEntry": false,
+			"args": [],
+			"cwd": "${workspaceRoot}",
+			"preLaunchTask": null,
+			"runtimeExecutable": "/Users/danielpazsoldan/.nvm/v4.2.3/bin/node",
+			"runtimeArgs": [
+				"--nolazy"
+			],
+			"env": {
+				"NODE_ENV": "development"
+			},
+			"externalConsole": false,
+			"sourceMaps": false,
+			"outDir": null
+		},
+		{
+			"name": "Attach",
+			"type": "node",
+			"request": "attach",
+			"port": 5858,
+			"address": "localhost",
+			"restart": false,
+			"sourceMaps": false,
+			"outDir": null,
+			"localRoot": "${workspaceRoot}",
+			"remoteRoot": null
+		},
+    {
+        "name": "Launch index.html",
+        "type": "chrome",
+        "request": "launch",
+        "cwd": "${workspaceRoot}",
+        "file": "public/index.html",
+        "runtimeArgs": [
+          "--remote-debugging-port=9222",
+          "--user-data-dir=tmp"
+        ]
+    }
+	]
+}
